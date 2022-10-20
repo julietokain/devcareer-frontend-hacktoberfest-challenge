@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  background-color: hsl(230, 100%, 99%);
+  background-image: url("../../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+}
+
+:root {
+  --main-color: hsl(227, 35%, 25%);
+}
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+
+  header {
+    margin-top: 40px;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url("../../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+      color: var(--main-color);
+      font-size: 30px;
+    }
+      p {
+        color: hsl(225, 20%, 60%);
+        font-size: 15px;
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+
+aside {
+  background-color: hsl(0, 0%, 100%);
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(227, 25%, 85%);
+  font-size: 15px;
+  color: hsl(225, 20%, 60%);
+  width: 50vw;
+  margin: auto;
+
+.tarrif {
+  display: flex;
+  margin-bottom: 20px;
+
+   .page-views {
+    text-transform: uppercase;
+    flex: 1;
+    align-self: center;
+   }
+    .price {
+      flex: 2;
+      display: flex;
+      justify-content: flex-end;
+      transition: all 0.5s;
+
+      span {
+        display: inline-block;
+      }
+       span:first-of-type,
+       span:first-of-type span {
+        color: var(--main-color);
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 800;
+      }
+      span:last-of-type {
+        font-size: 15px;
+        align-self: center;
+        margin-left: 5px;
+      }
+      }
+    }
+  
+
+.progress .progress-bar {
+  position: relative;
+  height: 20px;
+}
+.progress-bar input[type="range"] {
+  width: 100%;
+}
+.myrange {
+  appearance: none;
+  background-color: hsl(174, 77%, 80%);
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+.myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.myrange::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 10px hsl(174, 86%, 45%);
+}
+.progress .monthly {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+}
+.progress .monthly .discount {
+  padding: 3px 5px;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  border-radius: 5px;
+}
+.progress .monthly span,
+label {
+  margin-left: 10px;
+}
+.progress .switch {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: hsl(174, 77%, 80%);
+  cursor: pointer;
+}
+.progress .switch input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.progress .switch .slider {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 2px;
+  left: -7px;
+  transition: all 0.5s;
+}
+.progress .switch input:checked + .slider {
+  transform: translateX(18px);
+}
+
+hr {
+  border: 1px solid hsl(0, 0%, 98%);
+  margin: 20px 0;
+}
+.start {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style-image: url("../../images/icon-check.svg");
+    margin-left: 20px;
+    line-height: 25px;
+    text-align: left;
+  }
+  button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+    align-self: center;
+    font-size: 15px;
+  }
+}
+}
+
+@media (max-width: 600px) {
+  header {
+    margin-top: 30px;
+  }
+  aside {
+    width: 90vw;
+    padding: 50px 30px;
+    height: 60vh;
+    margin: auto;
+  }
+  .tarrif .price span {
+    display: inline-block;
+  }
+  .tarrif .price span:first-of-type,
+  .tarrif .price span:first-of-type span {
+    color: var(--main-color);
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .start {
+    flex-direction: column;
+  }
+  .start ul {
+    align-self: center;
+  }
+  .start button {
+    margin-top: 30px;
+  }
+  .progress .switch .slider {
+    left: -11px;
+  }
+}

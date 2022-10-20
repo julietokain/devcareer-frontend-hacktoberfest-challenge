@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  background-color: hsl(230deg, 100%, 99%);
+  background-image: url("../../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+}
+
+:root {
+  --main-color: hsl(227, 35%, 25%);
+}
+
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+}
+.container header {
+  margin-top: 40px;
+  padding: 50px 0;
+  text-align: center;
+  background-image: url("../../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container header h1 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.container header p {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 15px;
+  margin-bottom: 45px;
+}
+
+aside {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(227deg, 25%, 85%);
+  font-size: 15px;
+  color: hsl(225deg, 20%, 60%);
+  width: 50vw;
+  margin: auto;
+}
+aside .tarrif {
+  display: flex;
+  margin-bottom: 20px;
+}
+aside .tarrif .page-views {
+  text-transform: uppercase;
+  flex: 1;
+  align-self: center;
+}
+aside .tarrif .price {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.5s;
+}
+aside .tarrif .price span {
+  display: inline-block;
+}
+aside .tarrif .price span:first-of-type,
+aside .tarrif .price span:first-of-type span {
+  color: var(--main-color);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+}
+aside .tarrif .price span:last-of-type {
+  font-size: 15px;
+  align-self: center;
+  margin-left: 5px;
+}
+aside .progress .progress-bar {
+  position: relative;
+  height: 20px;
+}
+aside .progress-bar input[type=range] {
+  width: 100%;
+}
+aside .myrange {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: hsl(174deg, 77%, 80%);
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+aside .myrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: hsl(174deg, 86%, 45%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+aside .myrange::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 10px hsl(174deg, 86%, 45%);
+}
+aside .progress .monthly {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+}
+aside .progress .monthly .discount {
+  padding: 3px 5px;
+  background-color: hsl(14deg, 92%, 95%);
+  color: hsl(15deg, 100%, 70%);
+  border-radius: 5px;
+}
+aside .progress .monthly span,
+aside label {
+  margin-left: 10px;
+}
+aside .progress .switch {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: hsl(174deg, 77%, 80%);
+  cursor: pointer;
+}
+aside .progress .switch input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+aside .progress .switch .slider {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 2px;
+  left: -7px;
+  transition: all 0.5s;
+}
+aside .progress .switch input:checked + .slider {
+  transform: translateX(18px);
+}
+aside hr {
+  border: 1px solid hsl(0deg, 0%, 98%);
+  margin: 20px 0;
+}
+aside .start {
+  display: flex;
+  justify-content: space-between;
+}
+aside .start ul {
+  list-style-image: url("../../images/icon-check.svg");
+  margin-left: 20px;
+  line-height: 25px;
+  text-align: left;
+}
+aside .start button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  width: 180px;
+  height: 40px;
+  border-radius: 22px;
+  cursor: pointer;
+  outline: none;
+  align-self: center;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  header {
+    margin-top: 30px;
+  }
+  aside {
+    width: 90vw;
+    padding: 50px 30px;
+    height: 60vh;
+    margin: auto;
+  }
+  .tarrif .price span {
+    display: inline-block;
+  }
+  .tarrif .price span:first-of-type,
+.tarrif .price span:first-of-type span {
+    color: var(--main-color);
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .start {
+    flex-direction: column;
+  }
+  .start ul {
+    align-self: center;
+  }
+  .start button {
+    margin-top: 30px;
+  }
+  .progress .switch .slider {
+    left: -11px;
+  }
+}/*# sourceMappingURL=main.css.map */
